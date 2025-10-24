@@ -1,0 +1,85 @@
+/* Sidebar.css */
+
+/* Fondo gris muy suave y altura completa */
+.sidebar {
+  background-color: #efe4fd;
+  height: 100vh;
+  width: 250px;
+  position: relative;
+}
+
+/* Tipografía elegante y espaciada */
+.sidebar h2 {
+  font-family: 'Texturina', sans-serif;
+  font-weight: 700; /* opcional, para que se vea más destacado */
+  font-size: 1.8rem; /* ajusta a tu gusto */
+  margin-bottom: 1rem;
+  color: #6d248f;
+}
+
+
+/* Estilo de los links */
+.sidebar .nav-link {
+  color: #6d248f;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+/* Hover: cambio de color */
+.sidebar .nav-link:hover {
+  color: #13052c; /* rosa suave, similar al estilo artístico */
+}
+.sidebar ul.nav li.nav-item {
+  margin-bottom: 0.0900rem; /* Reduce el espacio entre renglones */
+}
+
+.sidebar ul.nav li.nav-item .nav-link {
+  padding: 0.1rem 0.1rem; /* Reduce el padding interno */
+  font-size: 0.95rem;     /* Opcional: hace el texto un poquito más pequeño */
+}
+
+
+.instagram-link {
+  margin-top: 1.5rem; /* ajustá este valor para subir o bajar el ícono */
+  text-align: center;
+}
+
+.instagram-link a {
+  color: #6d248f;
+  transition: color 0.3s ease;
+}
+
+.instagram-link a:hover {
+  color: #160347;
+}
+
+
+
+/* Bloque de derechos de autor al estilo Petra Collins */
+.copyright-text {
+  font-style: italic;        /* cursiva */
+  font-size: 0.65rem;
+  color: #6d248f;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  
+  display: flex;
+  flex-direction: column;    /* líneas una debajo de otra */
+  align-items: flex-end;     /* alineado a la derecha */
+  
+  position: absolute;        
+  bottom: 60px;              /* ajustado para que quede equilibrado con el ícono */
+  right: 10px;               /* separación del borde derecho */
+
+  padding-left: 20px;   /* separa el texto del borde izquierdo */
+  padding-right: 20px;  /* mantiene separación del borde derecho */
+  max-width: 250px;     /* opcional: limita el ancho para que sea compacto */
+}
+
+/* Línea del año en negrita y más abajo */
+.copyright-year {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: bold;
+}

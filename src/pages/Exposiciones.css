@@ -1,0 +1,31 @@
+/* Wrapper */
+.exposiciones-wrapper {
+  display: block;
+  min-height: 90vh;
+  background-color: transparent;
+  padding: 1rem 2rem 2rem 2rem; /* mismo padding que Contacto */
+}
+
+/* Contenedor principal */
+.exposiciones-container {
+  max-width: 600px;
+  font-family: 'Texturina', sans-serif;
+  color: #6d248f;
+}
+
+/* Títulos y párrafos */
+.exposiciones-container h2,
+.exposiciones-container p,
+.exposiciones-container label {
+  color: #6d248f !important;
+}
+
+.exposiciones-container a {
+  color: #6d248f !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.exposiciones-container a:hover {
+  color: #160347 !important;
+}

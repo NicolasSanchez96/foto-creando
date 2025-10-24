@@ -1,0 +1,83 @@
+/* Wrapper de toda la página */
+.contacto-wrapper {
+  display: block;
+  min-height: 90vh;
+  background-color: transparent; /* fondo limpio */
+  padding: 1rem 2rem 2rem 2rem; /* margen desde la barra lateral */
+}
+
+/* Contenedor principal */
+.contacto-container {
+  max-width: 600px;
+  font-family: 'Texturina', sans-serif;
+  color: #6d248f;
+}
+
+/* Información de contacto */
+.contacto-info h2,
+.contacto-info p,
+.contacto-info label {
+  color: #6d248f !important;
+}
+
+.contacto-info a {
+  color: #160347 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacto-info a:hover {
+  color: #6d248f !important;
+}
+
+/* Formulario de contacto */
+.contacto-form {
+  margin-top: 2rem;
+  padding: 0; /* quitamos fondo y padding del formulario */
+  border: none; /* quitamos borde */
+}
+
+.contacto-form h3,
+.contacto-form label {
+  color: #6d248f !important;
+}
+
+/* Inputs y textarea: solo estas cajitas tienen borde */
+form.contacto-form input.form-control,
+form.contacto-form textarea.form-control {
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  color: #6d248f !important;
+  background-color: transparent !important;
+  border: 1px solid #6d248f !important; /* solo el borde de la cajita */
+  padding: 0.5rem;
+}
+
+form.contacto-form input.form-control:focus,
+form.contacto-form textarea.form-control:focus {
+  border-color: #160347 !important;
+  box-shadow: none !important;
+}
+
+/* Placeholder */
+form.contacto-form input.form-control::placeholder,
+form.contacto-form textarea.form-control::placeholder {
+  color: #6d248f !important;
+  opacity: 0.7 !important;
+}
+
+.contacto-form .btn-primary {
+  margin-top: 1rem; /* agrega espacio arriba del botón */
+  background-color: #6d248f !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: #fef9ff !important;
+  padding: 0.5rem 1.2rem !important;
+  font-weight: 600 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.contacto-form .btn-primary:hover {
+  background-color: #160347 !important;
+}
