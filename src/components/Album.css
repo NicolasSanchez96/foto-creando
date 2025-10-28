@@ -1,22 +1,47 @@
-.card {
+.album-wrapper {
+  width: 350px;            /* ancho del álbum */
+  margin: 0 0.5rem;        /* separación horizontal */
+  flex-shrink: 0;           /* evita que se encoja */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin: 1rem;
+  background: none;         /* elimina cualquier fondo */
+  padding: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s; /* hover solo mueve */
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.album-wrapper:hover {
+  transform: translateY(-5px); /* mueve suavemente el album hacia arriba */
 }
 
-.card-title {
-  font-family: 'Georgia', serif;
+.album-img {
+  width: 100%;
+  max-height: 550px;          /* altura ideal de la imagen */
+  object-fit: contain;          /* mantiene proporción y recorta lo necesario */
+  border-radius: 12px;
+  display: block;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.album-title {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'Texturina';
   font-weight: 500;
+  font-size: 1.2rem;
+  color: #6d248f;
+  background: none !important; /* elimina cualquier fondo */
+  border: none !important;     /* elimina borde */
 }
 
-.card-text {
-  font-family: 'Arial', sans-serif;
+.album-text {
   font-size: 0.9rem;
-  color: #555;
+  color: #444;
+  margin-top: 0.25rem;
+  padding: 0;
+  background: none !important;
+  border: none !important;
 }

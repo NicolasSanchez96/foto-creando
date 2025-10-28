@@ -1,0 +1,33 @@
+.books-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;            /* quita padding del contenedor padre */
+  background: none !important; /* elimina fondo que genera el recuadro */
+  overflow: visible;
+}
+
+.books-wrapper *,
+.albums-row,
+.albums-row * {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Fila horizontal de albums */
+.albums-row {
+  display: flex;
+  gap: 1rem;          /* separación horizontal entre albums */
+  flex-wrap: nowrap;   /* todos en una fila */
+  justify-content: flex-start;
+  padding-left: 10px;  /* empuja la fila a la derecha */
+  margin: 0;
+}
+
+/* Oculta scrollbar si la fila se pasa del ancho */
+.albums-row::-webkit-scrollbar {
+  display: none;
+}
+
+
