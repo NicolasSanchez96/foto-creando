@@ -1,47 +1,81 @@
-/* Sidebar.css */
-
 /* Fondo gris muy suave y altura completa */
 .sidebar {
   background-color: #efe4fd;
   height: 100vh;
   width: 250px;
-  position: relative;
+  position: fixed;
+  padding: 1rem; /* padding general para todo el contenido */
 }
 
-/* Tipografía elegante y espaciada */
-.sidebar h2 {
+/* Título principal */
+.sidebar-title {
   font-family: 'Texturina', sans-serif;
-  font-weight: 700; /* opcional, para que se vea más destacado */
-  font-size: 1.8rem; /* ajusta a tu gusto */
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.0rem;
+  margin-bottom: 0.1rem;
   color: #6d248f;
+  text-align: left;       /* alineado a la izquierda */
+  padding-left: 0.25rem;  /* ajusta la separación del borde */
+  line-height: 1.1;
 }
 
+/* Subtítulo pequeño debajo del título */
+.sidebar-subtitle {
+  display: block;
+  font-size: 0.65rem;
+  color: #6d248f;
+  opacity: 0.8;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-top: 0.05rem;
+  text-align: left;
+  padding-left: 0.25rem; /* coincide con padding del título */
+}
 
-/* Estilo de los links */
+/* Links del sidebar con efecto animado tipo portafolio */
 .sidebar .nav-link {
   color: #6d248f;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  transition: color 0.3s;
+  position: relative; /* necesario para pseudo-elemento */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Hover: cambio de color */
-.sidebar .nav-link:hover {
-  color: #13052c; /* rosa suave, similar al estilo artístico */
+/* Línea animada debajo del link */
+.sidebar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* justo debajo del texto */
+  width: 0%;
+  height: 1px;
+  background-color: #6d248f;
+  transition: width 0.3s ease;
 }
+
+/* Hover del link */
+.sidebar .nav-link:hover {
+  color: #13052c;
+  text-shadow: 1px 1px 2px #efe4fd;
+}
+
+/* Animación de la línea al hacer hover */
+.sidebar .nav-link:hover::after {
+  width: 100%;
+}
+
 .sidebar ul.nav li.nav-item {
-  margin-bottom: 0.0900rem; /* Reduce el espacio entre renglones */
+  margin-bottom: 0.09rem;
 }
 
 .sidebar ul.nav li.nav-item .nav-link {
-  padding: 0.1rem 0.1rem; /* Reduce el padding interno */
-  font-size: 0.95rem;     /* Opcional: hace el texto un poquito más pequeño */
+  padding: 0.1rem 0.1rem;
+  font-size: 0.95rem;
 }
 
-
+/* Ícono de Instagram */
 .instagram-link {
-  margin-top: 1.5rem; /* ajustá este valor para subir o bajar el ícono */
+  margin-top: 1.5rem;
   text-align: center;
 }
 
@@ -54,32 +88,31 @@
   color: #160347;
 }
 
-
-
 /* Bloque de derechos de autor al estilo Petra Collins */
 .copyright-text {
-  font-style: italic;        /* cursiva */
+  font-style: italic;
   font-size: 0.65rem;
   color: #6d248f;
   line-height: 1.4;
   letter-spacing: 0.5px;
-  
-  display: flex;
-  flex-direction: column;    /* líneas una debajo de otra */
-  align-items: flex-end;     /* alineado a la derecha */
-  
-  position: absolute;        
-  bottom: 60px;              /* ajustado para que quede equilibrado con el ícono */
-  right: 10px;               /* separación del borde derecho */
 
-  padding-left: 20px;   /* separa el texto del borde izquierdo */
-  padding-right: 20px;  /* mantiene separación del borde derecho */
-  max-width: 250px;     /* opcional: limita el ancho para que sea compacto */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 250px;
 }
 
-/* Línea del año en negrita y más abajo */
+/* Línea del año en negrita */
 .copyright-year {
   display: block;
   margin-top: 0.8rem;
   font-weight: bold;
 }
+

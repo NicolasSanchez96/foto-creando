@@ -28,7 +28,7 @@ function Contacto() {
         <div className="contacto-form">
           <h3>Deja tu consulta aquí</h3>
           <form>
-            <label htmlFor="consulta">Consulta</label>
+            <label htmlFor="consulta">Escribime!</label>
             <textarea
               id="consulta"
               className="form-control"

@@ -4,6 +4,7 @@
   min-height: 90vh;
   background-color: transparent;
   padding: 1rem 2rem 2rem 2rem; /* mismo padding que Contacto */
+  margin-left: 250px;
 }
 
 /* Contenedor principal */
@@ -19,6 +20,11 @@
 .exposiciones-container label {
   color: #6d248f !important;
 }
+
+.exposiciones-container h2 {
+  margin-bottom: 3rem; /* ajusta el valor a tu gusto */
+}
+
 
 .exposiciones-container a {
   color: #6d248f !important;

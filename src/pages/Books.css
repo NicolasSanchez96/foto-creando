@@ -4,6 +4,11 @@
   padding: 0;            /* quita padding del contenedor padre */
   background: none !important; /* elimina fondo que genera el recuadro */
   overflow: visible;
+  margin-left: 250px;  /* ancho de tu sidebar */
+  overflow-x: auto;    /* scroll horizontal */
+  overflow-y: hidden;  /* evita scroll vertical innecesario */
+  padding-bottom: 20px
+
 }
 
 .books-wrapper *,
@@ -14,6 +19,20 @@
   padding: 0 !important;
   margin: 0 !important;
 }
+
+.books-wrapper::-webkit-scrollbar {
+  height: 7px;  /* alto de la barra */
+}
+
+.books-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.books-wrapper::-webkit-scrollbar-thumb {
+  background-color: #6d248f;
+  border-radius: 4px;
+}
+
 
 /* Fila horizontal de albums */
 .albums-row {

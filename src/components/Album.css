@@ -1,5 +1,5 @@
 .album-wrapper {
-  width: 350px;            /* ancho del álbum */
+  width: 325px;            /* ancho del álbum */
   margin: 0 0.5rem;        /* separación horizontal */
   flex-shrink: 0;           /* evita que se encoja */
   border-radius: 12px;
@@ -12,17 +12,19 @@
 }
 
 .album-wrapper:hover {
-  transform: translateY(-5px); /* mueve suavemente el album hacia arriba */
+  transform: translateY(-2px); /* mueve suavemente el album hacia arriba */
 }
 
 .album-img {
   width: 100%;
-  max-height: 550px;          /* altura ideal de la imagen */
-  object-fit: contain;          /* mantiene proporción y recorta lo necesario */
+  max-height: 520px;          /* altura ideal de la imagen */
+  object-fit: cover;          /* mantiene proporción y recorta lo necesario */
+  object-position: center; 
   border-radius: 12px;
   display: block;
   margin: 0;
   padding: 0;
+ 
  
 }
 

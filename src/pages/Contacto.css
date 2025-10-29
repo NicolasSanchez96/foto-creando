@@ -4,6 +4,7 @@
   min-height: 90vh;
   background-color: transparent; /* fondo limpio */
   padding: 1rem 2rem 2rem 2rem; /* margen desde la barra lateral */
+  margin-left: 250px; /* ancho del sidebar */
 }
 
 /* Contenedor principal */
@@ -43,6 +44,7 @@
 }
 
 /* Inputs y textarea: solo estas cajitas tienen borde */
+/* Inputs y textarea: solo estas cajitas tienen borde */
 form.contacto-form input.form-control,
 form.contacto-form textarea.form-control {
   width: 100%;
@@ -50,15 +52,20 @@ form.contacto-form textarea.form-control {
   margin-bottom: 1rem;
   color: #6d248f !important;
   background-color: transparent !important;
-  border: 1px solid #6d248f !important; /* solo el borde de la cajita */
+  border: 1px solid #6d248f !important; /* borde violeta */
   padding: 0.5rem;
+  outline: none !important;
+  box-shadow: none !important; /* quita sombra azul predeterminada */
 }
 
+/* Focus: quita cualquier efecto de Bootstrap */
 form.contacto-form input.form-control:focus,
 form.contacto-form textarea.form-control:focus {
-  border-color: #160347 !important;
-  box-shadow: none !important;
+  border-color: #160347 !important; /* borde violeta oscuro */
+  outline: none !important;
+  box-shadow: none !important; /* importante: elimina la sombra de focus */
 }
+
 
 /* Placeholder */
 form.contacto-form input.form-control::placeholder,
@@ -67,17 +74,54 @@ form.contacto-form textarea.form-control::placeholder {
   opacity: 0.7 !important;
 }
 
+/* Botón de enviar */
 .contacto-form .btn-primary {
   margin-top: 1rem; /* agrega espacio arriba del botón */
   background-color: #6d248f !important;
   border: none !important;
   border-radius: 0 !important;
   color: #fef9ff !important;
-  padding: 0.5rem 1.2rem !important;
+  padding: 0.5rem 0.5rem !important;
   font-weight: 600 !important;
   transition: background-color 0.3s ease !important;
 }
 
 .contacto-form .btn-primary:hover {
   background-color: #160347 !important;
+}
+
+/* Elimina cualquier outline/box-shadow cuando el formulario o su contenedor reciben foco */
+.contacto-form,
+.contacto-form:focus,
+.contacto-form:focus-within,
+.contacto-wrapper:focus,
+.contacto-wrapper:focus-within {
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border: none !important; /* por si hay borde aplicado al contenedor */
+}
+
+/* 🔹 Elimina cualquier borde o sombra celeste al hacer clic en los campos */
+.contacto-form input.form-control:focus,
+.contacto-form textarea.form-control:focus {
+  border: 1px solid #6d248f !important; /* mantiene tu borde violeta */
+  box-shadow: none !important;          /* quita la sombra celeste */
+  outline: none !important;             /* quita el contorno azul */
+  background-color: transparent !important;
+}
+
+/* 🔹 Asegura que tampoco se active el focus-visible de Bootstrap */
+.contacto-form input.form-control:focus-visible,
+.contacto-form textarea.form-control:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 🔹 También cubre navegadores WebKit (Chrome, Edge, Safari) */
+.contacto-form input.form-control:focus::-webkit-focus-inner,
+.contacto-form textarea.form-control:focus::-webkit-focus-inner {
+  border: 0 !important;
+  box-shadow: none !important;
 }

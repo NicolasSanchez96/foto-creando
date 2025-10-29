@@ -1,0 +1,56 @@
+.inicio-wrapper {
+  margin-left: 250px;      
+  height: 85vh;            
+  width: 100%;             
+  max-width: 1000px;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef9ff;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0px;
+  border-radius: 12px;     
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.inicio-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease; /* fade más largo y suave */
+}
+
+/* Título clickeable con hover individual por letra */
+.section-title {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #6d248f;
+  font-family: 'Texturina', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 1px;
+  z-index: 10;
+  cursor: pointer; 
+  display: inline-block;
+}
+
+/* Cada letra animada con hover */
+.section-title span {
+  display: inline-block;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.section-title span:hover {
+  transform: translateY(-3px);
+  text-shadow: 1px 1px 2px #7e30a0;
+}
