@@ -1,0 +1,56 @@
+.albumpage-wrapper {
+  margin-left: 250px;
+  margin-right: 0;
+  padding: 0;
+  width: calc(100% - 250px);
+  height: 85vh;
+  background: none;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.albumpage-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-left: 10px;
+  gap: 0.5rem;
+}
+
+.albumpage-img {
+  flex-shrink: 0;
+  width: auto;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0 0.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.albumpage-img:hover {
+  transform: translateY(-5px);
+}
+
+
+.albumpage-scrollbar {
+  width: 100%;
+  height: 6px;
+  background-color: #dcdcdc;
+  border-radius: 3px;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.albumpage-scroll-thumb {
+  height: 100%;
+  background-color: #6d248f;
+  width: 0%;
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}

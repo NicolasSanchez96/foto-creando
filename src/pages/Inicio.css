@@ -1,16 +1,16 @@
 .inicio-wrapper {
-  margin-left: 250px;      
-  height: 85vh;            
-  width: 100%;             
-  max-width: 1000px;       
+  margin-left: 260px;       /* deja espacio para el sidebar */
+  margin-top: 25px;         /* 🔹 bajamos todo el bloque (antes 0px) */
+  height: 85vh;             
+  width: 100%;              
+  max-width: 1000px;        
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fef9ff;
   overflow: hidden;
   position: relative;
-  margin-top: 0px;
-  border-radius: 12px;     
+  border-radius: 12px;      
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 

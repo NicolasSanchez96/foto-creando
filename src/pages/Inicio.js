@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import './Inicio.css';
 
 // Importar imágenes
-import ema from '../imagenes/books/ema/Photo06_6A.jpg';
-import meli from '../imagenes/books/melisa/AA005.jpg';
-import muestra from '../imagenes/books/muestra/sadad.JPG';
+import ema from '../imagenes/books/ema/Photo04_4A.jpg';
+import meli from '../imagenes/books/melisa/AA021.jpg';
+import muestra from '../imagenes/books/muestra/ghj.JPG';
 
 import madre from '../imagenes/gastro/madre/_DSC3462-2.jpg';
 import tortas from '../imagenes/gastro/tortas/_DSC2708.jpg';
@@ -54,7 +54,7 @@ function Inicio() {
       }, 1000); // duración fade out
 
       return () => clearTimeout(timeout);
-    }, 4000); // cada 4 segundos cambia la imagen
+    }, 3000); // cada 2 segundos cambia la imagen
 
     return () => clearInterval(interval);
   }, [sectionIndex]);

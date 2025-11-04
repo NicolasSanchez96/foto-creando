@@ -1,14 +1,13 @@
 .books-wrapper {
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;            /* quita padding del contenedor padre */
-  background: none !important; /* elimina fondo que genera el recuadro */
+  margin: 25px auto 0 auto;
+  padding: 0;
+  background: none !important;
   overflow: visible;
-  margin-left: 250px;  /* ancho de tu sidebar */
-  overflow-x: auto;    /* scroll horizontal */
-  overflow-y: hidden;  /* evita scroll vertical innecesario */
-  padding-bottom: 20px
-
+  margin-left: 260px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
 }
 
 .books-wrapper *,
@@ -21,7 +20,7 @@
 }
 
 .books-wrapper::-webkit-scrollbar {
-  height: 7px;  /* alto de la barra */
+  height: 7px;
 }
 
 .books-wrapper::-webkit-scrollbar-track {
@@ -33,20 +32,15 @@
   border-radius: 4px;
 }
 
-
-/* Fila horizontal de albums */
 .albums-row {
   display: flex;
-  gap: 1rem;          /* separación horizontal entre albums */
-  flex-wrap: nowrap;   /* todos en una fila */
+  gap: 1rem;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  padding-left: 10px;  /* empuja la fila a la derecha */
-  margin: 0;
+  padding-left: 10px;
+  margin-left: 20px;
 }
 
-/* Oculta scrollbar si la fila se pasa del ancho */
 .albums-row::-webkit-scrollbar {
   display: none;
 }
-
-
