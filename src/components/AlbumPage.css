@@ -1,5 +1,5 @@
 .albumpage-wrapper {
-  margin-left: 250px;
+  margin-left: 240px;
   margin-right: 0;
   padding: 0;
   width: calc(100% - 250px);
@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .albumpage-container {
@@ -35,7 +36,6 @@
 .albumpage-img:hover {
   transform: translateY(-5px);
 }
-
 
 .albumpage-scrollbar {
   width: 100%;
