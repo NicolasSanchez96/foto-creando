@@ -1,0 +1,81 @@
+
+.books-wrapper {
+  max-width: 1000px;
+  margin: 25px auto 0 auto;
+  padding: 0;
+  background: none !important;
+  overflow-x: auto;    
+  overflow-y: hidden;
+  margin-left: 260px;  
+  padding-bottom: 20px;
+}
+
+
+.books-wrapper *,
+.albums-row,
+.albums-row * {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+.books-wrapper::-webkit-scrollbar {
+  height: 7px; 
+}
+
+.books-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.books-wrapper::-webkit-scrollbar-thumb {
+  background-color: #6d248f;
+  border-radius: 4px;
+}
+
+
+.albums-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-left: 20px;  
+}
+
+
+.album-wrapper {
+  width: 350px;            
+  margin: 0 0.5rem;       
+  flex-shrink: 0;           
+  border-radius: 12px;
+  background: none;
+  padding: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.album-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.album-img {
+  width: 100%;
+  max-height: 500px;        
+  object-fit: contain;       
+  border-radius: 12px;
+  display: block;
+}
+
+.album-title {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'Texturina';
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #6d248f;
+  background: none !important;
+  border: none !important;
+}

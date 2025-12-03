@@ -1,19 +1,19 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 
 // Páginas principales
-import Inicio from './pages/Inicio';
-import Gastronomia, { imagenesMadre, imagenesTortas, imagenesPastas, imagenesPascuas } from './pages/Gastronomia';
-import Books, { imagenesEma, imagenesMelisa, imagenesMuestra, imagenesSuspension } from './pages/Books';
-import Personal, { imagenesMdq24, imagenesMdq25, imagenesNorte, imagenesPopurri } from './pages/Personal';
-import Eventos, { imagenesDelfi, imagenesGuillermo, imagenesKiara, imagenesMorena } from './pages/Eventos';
-import Exposiciones from './pages/Exposiciones';
-import Contacto from './pages/Contacto';
+import Inicio from './pages/Inicio/Inicio';
+import Gastronomia, { imagenesMadre, imagenesTortas, imagenesPastas, imagenesPascuas } from './pages/Gastronomia/Gastronomia';
+import Books, { imagenesEma, imagenesMelisa, imagenesMuestra, imagenesSuspension } from './pages/Books/Books';
+import Personal, { imagenesMdq24, imagenesMdq25, imagenesNorte, imagenesPopurri } from './pages/Personal/Personal';
+import Eventos, { imagenesDelfi, imagenesGuillermo, imagenesKiara, imagenesMorena } from './pages/Eventos/Eventos';
+import Exposiciones from './pages/Exposiciones/Exposiciones';
+import Contacto from './pages/Contacto/Contacto';
 
 // Componente álbum reutilizable
-import AlbumPage from './components/AlbumPage';
+import AlbumPage from './components/AlbumPage/AlbumPage';
 
 function App() {
   return (

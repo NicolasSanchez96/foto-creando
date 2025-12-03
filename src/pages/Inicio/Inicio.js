@@ -2,22 +2,22 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './Inicio.css';
 
-// Importar imágenes
-import ema from '../imagenes/books/ema/Photo04_4A.jpg';
-import meli from '../imagenes/books/melisa/AA021.jpg';
-import muestra from '../imagenes/books/muestra/ghj.JPG';
 
-import madre from '../imagenes/gastro/madre/_DSC3462-2.jpg';
-import tortas from '../imagenes/gastro/tortas/_DSC2708.jpg';
-import tortas2 from '../imagenes/gastro/tortas/_DSC1104.jpg';
+import ema from '../../imagenes/books/ema/Photo04_4A.jpg';
+import meli from '../../imagenes/books/melisa/AA021.jpg';
+import muestra from '../../imagenes/books/muestra/ghj.JPG';
 
-import mdq from '../imagenes/personal/mdq-analogica/AA028A.jpg';
-import norte from '../imagenes/personal/norte/AA009.jpg';
-import mdq2 from '../imagenes/personal/mdq-digital/_DSC0128-2.jpg';
+import madre from '../../imagenes/gastro/madre/_DSC3462-2.jpg';
+import tortas from '../../imagenes/gastro/tortas/_DSC2708.jpg';
+import tortas2 from '../../imagenes/gastro/tortas/_DSC1104.jpg';
 
-import guillermo from '../imagenes/eventos/guillermo/_DSC0714.jpg';
-import kiara from '../imagenes/eventos/kiara/_DSC2036.jpg';
-import delfi from '../imagenes/eventos/delfi/_DSC1015.jpg';
+import mdq from '../../imagenes/personal/mdq-analogica/AA028A.jpg';
+import norte from '../../imagenes/personal/norte/AA009.jpg';
+import mdq2 from '../../imagenes/personal/mdq-digital/_DSC0128-2.jpg';
+
+import guillermo from '../../imagenes/eventos/guillermo/_DSC0714.jpg';
+import kiara from '../../imagenes/eventos/kiara/_DSC2036.jpg';
+import delfi from '../../imagenes/eventos/delfi/_DSC1015.jpg';
 
 const sections = [
   { title: "BOOKS", images: [ema, meli, muestra] },
@@ -50,16 +50,15 @@ function Inicio() {
           }
           return prev + 1;
         });
-        setFade(true); // fade in
-      }, 1000); // duración fade out
+        setFade(true); 
+      }, 1000); 
 
       return () => clearTimeout(timeout);
-    }, 3000); // cada 2 segundos cambia la imagen
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [sectionIndex]);
 
-  // Función para renderizar el título con cada letra envuelta en <span>
   const renderTitle = (title) => {
     return title.split("").map((char, index) => (
       <span key={index}>{char}</span>
@@ -68,7 +67,6 @@ function Inicio() {
 
   return (
     <div className="inicio-wrapper">
-      {/* Título clickeable */}
       <div
         className="section-title"
         onClick={() => navigate(routes[sectionIndex])}
@@ -76,7 +74,6 @@ function Inicio() {
         {renderTitle(sections[sectionIndex].title)}
       </div>
 
-      {/* Imagen */}
       <div className="inicio-container">
         <img
           src={sections[sectionIndex].images[imageIndex]}
@@ -90,4 +87,3 @@ function Inicio() {
 }
 
 export default Inicio;
-
