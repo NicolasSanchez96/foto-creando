@@ -9,7 +9,7 @@ function Sidebar() {
       {/* Título principal + subtítulo */}
       <h2 className="sidebar-title">
         Foto Creando
-        <span className="sidebar-subtitle">por Geraldine Condoleo</span>
+        <span className="sidebar-subtitle">por xxxxxx xxxxxx</span>
       </h2>
 
       <ul className="nav nav-pills flex-column mt-4">
